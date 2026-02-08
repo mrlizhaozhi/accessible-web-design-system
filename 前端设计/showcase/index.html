@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.container {
+			  padding: 10px 50px;
+			  max-width: 1250px;
+			  margin: 0 auto;
+			}
+			
+			.section {
+			  width: 100%;
+			  min-height: 600px;
+			  position: relative;
+			}
+			
+			#topic-1 {
+			  grid-area: topic-1;
+			  height: 100%;
+			}
+			
+			#topic-2 {
+			  grid-area: topic-2;
+			  margin-top: -100px;
+			}
+			
+			#topic-3 {
+			  grid-area: topic-3;
+			  margin-top: -100px;
+			}
+			
+			#topic-4 {
+			  grid-area: topic-4;
+			  height: 100%;
+			  background: white;
+			}
+			
+			.topics {
+			  display: grid;
+			  grid-template-columns: 2fr 1fr 1fr;
+			  grid-template-areas: "topic-1 topic-2 topic-3" "topic-1 topic-4 topic-4";
+			  grid-gap: 20px;
+			}
+			
+			.topics > div {
+			  height: 400px;
+			  z-index: 100;
+			}
+			
+			.topics img {
+			  width: auto;
+			  height: 40px;
+			}
+			
+			.topics a {
+			  padding-right: 1rem;
+			}
+			
+			#about-zhaozhi {
+			  display: inline-block;
+			  vertical-align: middle;
+			}
+			
+			#about-zhaozhi a {
+			  padding: 20px;
+			  background: white;
+			  border: 2px solid orange;
+			}
+			
+			#about-zhaozhi-wrapper {
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-top: -50px;
+			  text-align: center;
+			  position: relative;
+			}
+			
+			@media (max-width: 767.98px) {
+			  .container {
+			    max-width: 767.98px;
+			  }
+
+			  #topic-1 {
+			    grid-area: topic-1;
+			    height: 400px;
+			    margin-top: -50px;
+			  }
+			
+			  #topic-2 {
+			    grid-area: topic-2;
+			    height: 300px;
+			    margin-top: 0px;
+			  }
+			
+			  #topic-3 {
+			    grid-area: topic-3;
+			    height: 300px;
+			    margin-top: 0px;
+			  }
+			
+			  #topic-4 {
+			    grid-area: topic-4;
+			    min-height: 150px;
+			    background: white;
+			  }
+			
+			  .topics {
+			    display: grid;
+			    grid-template-columns: 1fr 1fr;
+			    grid-template-areas: "topic-1 topic-1" "topic-2 topic-3" "topic-4 topic-4";
+			    grid-gap: 10px;
+			    padding-bottom: 50px;
+			  }
+			
+			  #about-zhaozhi {
+			    display: inline-block;
+			    vertical-align: middle;
+			  }
+			
+			  #about-zhaozhi a {
+			    font-size: 14px;
+			    padding: 20px;
+			    background: white;
+			    border: 2px solid orange;
+			  }
+			
+			  #about-zhaozhi-wrapper {
+			    margin-left: auto;
+			    margin-right: auto;
+			    margin-top: -100px;
+			    text-align: center;
+			    position: relative;
+			  }
+			
+			  .topics img {
+			    width: 32px;
+			    height: auto;
+			  }
+		}
+		</style>
+	</head>
+	<body>
+		<div class="section" data-aos="fade-zoom-in" data-aos-duration="500" data-aos-once="true" data-aos-easing="ease-in-back" data-aos-delay="10" data-aos-offset="0">
+			<div class="container">
+				<div class="topics">
+					<div id="topic-1">
+						<img src="https://mrlizhaozhi.github.io/img/great-wall.png" style="width: 100%; height: 100%; object-fit: cover;">
+						<div id="about-zhaozhi-wrapper">
+							<h3 id="about-zhaozhi">
+								<a href="careers/">CAREERS</a>
+							</h3>
+						</div>
+					</div>
+					<div id="topic-2">
+						<img id="topic2" src="https://mrlizhaozhi.github.io/img/milwaukee-corner.png" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div id="topic-3">
+						<img id="topic3" src="https://mrlizhaozhi.github.io/img/guangzhou-corner.png" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div id="topic-4">
+						<div class="container">
+							<center>
+							<p style="font-size: 20px; font-family: Georgia; color: black;">Please follow me on these platforms:</p>
+							<div style="border-top: 1px solid #D3D3D3; padding-top: 20px; margin-left: 20px; margin-right: 20px;">
+								<a href="https://www.linkedin.com/in/mrlizhaozhi" target="_blank"><img src="https://mrlizhaozhi.github.io/img/linkedin.png"></a>
+								<a href="https://public.tableau.com/profile/mrlizhaozhi" target="_blank"><img src="https://mrlizhaozhi.github.io/img/tableau-icon.png"></a>
+								<a href="https://github.com/mrlizhaozhi/" target="_blank"><img src="https://mrlizhaozhi.github.io/img/github-icon.png"></a>
+								<br id="social-media-break">
+								<a href="https://www.kaggle.com/mrlizhaozhi" target="_blank"><img src="https://mrlizhaozhi.github.io/img/kaggle.png"></a>	
+								<a href="https://stackoverflow.com/users/15809801/%e6%9d%8e%e5%85%86%e6%99%ba-li-zhaozhi?tab=profile" target="_blank"><img src="https://mrlizhaozhi.github.io/img/stackoverflow.png"></a>	
+							</div>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

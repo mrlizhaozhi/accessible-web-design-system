@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html, body {
+			  margin: 0px;
+			  padding: 0px;
+			  scroll-behavior: smooth;
+			}
+			
+			body {
+			  background-image: url("https://mrlizhaozhi.github.iohttps://mrlizhaozhi.github.io/img/wallpaper.png");
+			}
+			
+			*, *::before, *::after {
+			  box-sizing: border-box;
+			}
+			
+			.page-content {
+			  min-height: 100vh;
+			}
+			
+			.container {
+			  padding: 10px 50px;
+			  max-width: 1250px;
+			  margin: 0 auto;
+			}
+			
+			.section {
+			  width: 100%;
+			  min-height: 600px;
+			  position: relative;
+			}
+
+
+			#darkred {
+			  padding: 0 50px;
+			  width: 100%;
+			  height: 400px;
+			  margin-top: -50px;
+			}
+			
+			#projects-title {
+			  grid-area: projects-title;
+			  height: 100px;
+			  margin-top: -300px;
+			  text-align: center;
+			  color: white;
+			}
+			
+			#project-1 {
+			  grid-area: project-1;
+			}
+			
+			#project-2 {
+			  grid-area: project-2;
+			}
+			
+			#project-3 {
+			  grid-area: project-3;
+			}
+			
+			#project-4 {
+			  grid-area: project-4;
+			}
+			
+			.projects {
+			  display: grid;
+			  grid-template-columns: 1fr 1fr 1fr 1fr;
+			  grid-template-areas: "projects-title projects-title projects-title projects-title" "project-1 project-2 project-3 project-4";
+			  grid-gap: 20px;
+			  padding-bottom: 50px;
+			  padding: 0 20px;
+			}
+			
+			.projects > div {
+			  height: 300px;
+			  margin-top: -200px;
+			  position: relative;
+			}
+			
+			.projects img {
+			  width: 100%;
+			  height: 100%;
+			  object-fit: cover;
+			  border: 2px solid orange;
+			}
+			
+			#projects-caption {
+			  text-align: center;
+			  padding: 10px;
+			  position: absolute;
+			  bottom: 0;
+			  background: rgba(0, 0, 0, 0.5);
+			  color: white;
+			  min-height: 50px;
+			  width: 100%;
+			  border-right: 2px solid orange;
+			  border-left: 2px solid orange;
+			  border-bottom: 2px solid orange;
+			}
+		
+			  	
+				@media (max-width: 991.98px) {
+						  #darkred {
+						    padding: 0 0;
+						    width: 100%;
+						    height: 300px;
+						    margin-top: 0;
+						  }
+						
+						  #project-3 {
+						    margin-top: 0px;
+						  }
+						
+						  #project-4 {
+						    margin-top: 0px;
+						  }
+						
+						  .projects {
+						    display: grid;
+						    grid-template-columns: 1fr 1fr;
+						    grid-template-areas: "projects-title projects-title" "project-1 project-2" "project-3 project-4";
+						    grid-gap: 20px;
+						    padding: 0 0;
+						  }
+						  
+						  
+						  
+				}
+				
+				
+				@media (max-width: 767.98px) {
+					
+					  #darkred {
+					    padding: 0 0;
+					    width: 100%;
+					    height: 300px;
+					    margin-top: 0;
+					  }
+					
+					  .projects {
+					    display: grid;
+					    grid-template-columns: 1fr 1fr;
+					    grid-template-areas: "projects-title projects-title" "project-1 project-2" "project-3 project-4";
+					    grid-gap: 20px;
+					    padding: 0 0;
+					  }
+
+}
+
+
+					
+					#all-posts-1{grid-area: all-posts-1;}
+					#all-posts-2{grid-area: all-posts-2; text-align: right;}
+					.all-posts{display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "all-posts-1 all-posts-2";}
+				
+					#post-1{grid-area: post-1;}
+					#post-2{grid-area: post-2;}
+					#post-3{grid-area: post-3;}
+					.featured-posts{display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas: "post-1 post-2 post-3"; grid-gap: 10px;}
+				
+					#post-image{grid-area: post-image;}
+					#post-date{grid-area: post-date;}
+					#post-date::before{content: " "; display: inline-block; border: 1px solid orange; width: 30px; vertical-align: middle; margin-right: 5px;}
+					#post-title{grid-area: post-title;}
+					#post-title a{font-family: 'Garamond', sans-serif; text-decoration: none;}
+					#post-title a:hover{text-decoration: underline;}
+					.post-template{display: grid; grid-template-columns: 1fr 2fr; grid-template-areas: 
+						"post-image post-date" 
+						"post-image post-title"; grid-gap: 10px;}
+					
+					#research-category {list-style-type: none; display: flex; flex-wrap: wrap; padding: 0px;}
+					#tab-1{display: flex; flex: 1; height: 50px; background: wheat; justify-content: center; align-items: center;}
+					#tab-2{display: flex; flex: 1; height: 50px; background: wheat; justify-content: center; align-items: center;}
+					#tab-3{display: flex; flex: 1; height: 50px; background: wheat; justify-content: center; align-items: center;}
+					#research-category a{text-decoration: none; padding: 10px;}
+				
+					@media(max-width: 991.98px){
+						.featured-posts{grid-template-columns: 1fr; grid-template-areas: "post-1""post-2""post-3";}
+						#all-posts-2{grid-area: all-posts-2; text-align: center;}
+						.all-posts{display: grid; grid-template-columns: 1fr; grid-template-areas: "all-posts-1" "all-posts-2";}
+						#post-1, #post-2 {padding-bottom: 10px; border-bottom: 1px solid rgba(201, 221, 255, .2);}
+					}
+		</style>
+	</head>
+	<body>
+		<div style="top: 100px; " class="section" data-aos="fade-zoom-in" data-aos-duration="500" data-aos-once="true" data-aos-easing="ease-in-back" data-aos-delay="10" data-aos-offset="0">
+			<div style="width: auto; background: black; height: 300px;">
+				<img src="https://mrlizhaozhi.github.io/img/darkred-background.png" id="darkred">
+			</div>
+			<div class="container" style="text-align: center;" >
+				<div class="projects">
+					<div id="projects-title">
+						<h1>PROJECTS</h1>
+					</div>
+					<div id="project-1">
+						<img src="https://mrlizhaozhi.github.io/img/spreadsheet.png">
+						<div id="projects-caption">
+							Excel VBA Spreadsheet Application for Standardising Operating Procedures
+						</div>
+					</div>
+					<div id="project-2">
+						<img src="https://mrlizhaozhi.github.io/img/business-intelligence.png">
+						<div id="projects-caption">
+							Predictive and Prescriptive Analytics with R and Excel
+						</div>
+					</div>
+					<div id="project-3">
+						<img src="https://mrlizhaozhi.github.io/img/artificial-intelligence.png">
+						<div id="projects-caption">
+							Machine Learning with Python and TensorFlow
+						</div>
+					</div>
+					<div id="project-4">
+						<img src="https://mrlizhaozhi.github.io/img/powerbi.png">
+						<div id="projects-caption">
+							Data Visualization with Power BI: Census Data Analysis
+						</div>
+					</div>
+				</div>
+				<a href="/projects/">
+					<p id="button"  style="padding: 10px; border: 2px solid; display: inline-block;">
+						MORE PROJECTS
+					</p>
+				</a>
+			</div>
+		</div>
+		
+		<div style="color: white; min-height: 200px; position: relative;">
+			<img src="https://mrlizhaozhi.github.io/img/china-red.png" style="filter: brightness(50%); width: 100%; height: 100%; object-fit: cover; position: absolute; object-position: top left; z-index: -1;">
+			<div class="container">
+				<div class="all-posts">
+					<div id="all-posts-1">
+						<h3 id="featured-posts-title">FEATURED</h3>
+					</div>
+					<div id="all-posts-2">
+						<h3><a id="view-all-posts" href="/blogs/">All Posts</a></h3>
+					</div>
+				</div>
+		
+				<div class="featured-posts">
+					<div id="post-1">
+						<div class="post-template">
+							<div id="post-image"><img src="https://mrlizhaozhi.github.io/img/logo-for-all.png" style="height: 100px; width: 100%; object-fit: cover;"></div>
+							<div id="post-date">31 AUGUST 2021</div>
+							<div id="post-title">
+								<a href="/blogs/2021-08/a-new-website-is-coming/">
+									A New Website is Coming         					
+								</a>
+							</div>
+						</div>
+					</div>	
+		
+					<div id="post-2">
+						<div class="post-template">
+							<div id="post-image"><img src="https://mrlizhaozhi.github.io/img/ccp.png" style="height: 100px; width: 100%; object-fit: cover;"></div>
+							<div id="post-date">31 AUGUST 2021</div>
+							<div id="post-title">
+								<a href="/blogs/2021-08/challenging-the-chinese-communist-partys-reckless-internet-censorship-with-virtual-private-network-applications">
+									Challenging Internet Censorship with Virtual Private Network             
+								</a>
+							</div>
+						</div>
+					</div>
+		
+					<div id="post-3">
+						<div class="post-template">
+							<div id="post-image"><img src="https://mrlizhaozhi.github.io/img/covid-small.png" style="height: 100px; width: 100%; object-fit: cover;"></div>
+							<div id="post-date">31 JULY 2021</div>
+							<div id="post-title">
+								<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+									  COVID-19 Resources from the World Health Organization					
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

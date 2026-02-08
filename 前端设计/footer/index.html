@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.container{padding: 10px 50px; max-width: 1250px; margin: 0 auto;}
+			/*####################################################*/
+			/*footer menu*/
+			#footer-menu-1{-ms-grid-row: 1;-ms-grid-column: 1;grid-area: footer-menu-1;}
+			#footer-menu-2{-ms-grid-row: 1;-ms-grid-column: 3;grid-area: footer-menu-2;}
+			#footer-menu-3{-ms-grid-row: 1;-ms-grid-column: 5;grid-area: footer-menu-3;}
+			#footer-menu-4{-ms-grid-row: 1;-ms-grid-column: 7;grid-area: footer-menu-4;}
+			.footer-menu{display: -ms-grid;display: grid; -ms-grid-columns: 1fr 0 1fr 0 1fr 0 1fr; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-areas: "footer-menu-1 footer-menu-2 footer-menu-3 footer-menu-4"; grid-gap: 0; padding: 20px 0;}
+			.footer-menu ul{list-style-type: none;}
+			.footer-menu li{padding: 5px 0;}
+			
+			/*footer links*/
+			.footer-menu a{text-decoration: none; color: white;}
+			.footer-menu a:hover, .footer-menu a:visited:hover{color: grey;}
+			.footer-menu a:visited{color: #9370DB;}
+			
+			.footer-menu > div{border-left: 1px solid rgba(201, 221, 255, .2);}
+			#footer-menu-4{border-right: 1px solid rgba(201, 221, 255, .2);}
+			
+			/*####################################################*/
+			/*footer*/
+			.footer{padding: 15px 0px; min-width: 100%; min-height: 50px; background: #062135; color: white; }
+			.footer-grid a{padding-left: 20px; float: right;}
+			.footer-grid a{text-decoration: none; color: white;}
+			.footer-grid a:hover, .footer a:visited:hover{color: grey;}
+			.footer-grid{display: -ms-grid;display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr;}
+			#footer-items {vertical-align: middle; text-align: right; padding-left: 0; display: inline;}
+			#footer-items li{display: inline; list-style-type: none; padding: 5px 10px;}
+			
+			@media (max-width: 991.98px){			
+				.footer-menu{display: -ms-grid;display: grid; -ms-grid-columns: 1fr 0 1fr; grid-template-columns: 1fr 1fr; -ms-grid-rows: auto 0 auto; grid-template-areas: "footer-menu-1 footer-menu-2" "footer-menu-3 footer-menu-4"; grid-gap: 0;}
+				#footer-menu-1, #footer-menu-3{border-left: none;}
+				#footer-menu-4{border-right: none;}
+				.footer-menu > div{margin: 0 0;}
+			
+				.footer{text-align: center;} 
+				.footer-grid a{float: none; padding-bottom: 20px;}
+				.footer-grid a:after{content: "\a"; white-space: pre;}
+				.footer-grid{-ms-grid-columns: 1fr;grid-template-columns: 1fr;}
+				.footer-grid > div{padding: 10px 0;}
+				#footer-items {text-align: center;}
+				#footer-items li{display: block; padding: 5px 0; }
+				#footer-menu-1{
+					-ms-grid-row: 1;
+					-ms-grid-column: 1;}
+				#footer-menu-2{
+					-ms-grid-row: 1;
+					-ms-grid-column: 3;}
+				#footer-menu-3{
+					-ms-grid-row: 3;
+					-ms-grid-column: 1;}
+				#footer-menu-4{
+					-ms-grid-row: 3;
+					-ms-grid-column: 3;}
+			}
+			
+			@media (max-width: 767.98px) {
+				/*####################################################*/
+				/*footer menu*/
+				.footer-menu{display: -ms-grid;display: grid; -ms-grid-columns: 1fr; grid-template-columns: 1fr; -ms-grid-rows: auto 0 auto 0 auto 0 auto; grid-template-areas: "footer-menu-1" "footer-menu-2" "footer-menu-3" "footer-menu-4"; grid-gap: 0;}
+				.footer-menu > div{border-left: none; margin: 0 0;}
+				.footer-menu > div{border-bottom: 1px solid rgba(201, 221, 255, .2);}
+				.footer-menu ul{padding-left: 0;}
+
+				#footer-menu-1{
+					-ms-grid-row: 1;
+					-ms-grid-column: 1;}
+				#footer-menu-2{
+					-ms-grid-row: 3;
+					-ms-grid-column: 1;}
+				#footer-menu-3{
+					-ms-grid-row: 5;
+					-ms-grid-column: 1;}
+				#footer-menu-4{
+					-ms-grid-row: 7;
+					-ms-grid-column: 1;}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--responsive footer-->
+		<div style="min-height: 200px; background: #0a314d; color: white;">
+			<div class="container">
+				<div class="footer-menu">
+					<!-- <div id="footer-menu-1">
+						<ul style="text-align: center;">
+							<li><img src="/img/site-logo-dark.png" style="width: 150px; height: auto;"></li>
+							<li><h3 style="font-family: 'Georgia';">LI ZHAOZHI</h3></li>
+						</ul>
+					</div> -->
+					<div id="footer-menu-1">
+						<ul>
+							<li><h3>ABOUT</h3></li>
+							<li><a href="/about-zhaozhi/">About Zhaozhi</a></li>
+							<li><a href="/about-zhaozhi/mission/">Mission</a></li>
+							<li><a href="/about-zhaozhi/values/">Values</a></li>
+							<li><a href="/about-zhaozhi/remarks-speeches/">Remarks</a></li>
+						</ul>
+					</div>
+					<div id="footer-menu-2">
+						<ul>
+							<li><h3>RESEARCH</h3></li>
+							<li><a href="/research/">Research Centre</a></li>
+							<li><a href="/research/programmes/">Programmes</a></li>
+							<li><a href="/research/projects/">Projects</a></li>
+							<li><a href="/research/publications/">Publications</a></li>
+							<li><a href="/resources/">Resources</a></li>
+						</ul>
+					</div>
+					<div id="footer-menu-3">
+						<ul>
+							<li><h3>NEWSROOM</h3></li>
+							<li><a href="/blogs/press-releases/">Press Releases</a></li>
+							<li><a href="/blogs/blogs-opeds/">Blogs & Op-Eds</a></li>
+							<li><a href="/blogs/reports-publications/">Reports & Publications</a></li>
+							<li><a href="/blogs/downloads/">Downloadable Media</a></li>
+						</ul>
+					</div>
+					<div id="footer-menu-4">
+						<ul>
+							<li><h3>PROFILES</h3></li>
+							<li><a href="https://www.zhihu.com/people/mrlizhaozhi" target="_blank">Zhihu</a></li>
+							<li><a href="https://medium.com/@lizhaozhi" target="_blank">Medium</a></li>
+							<li><a href="https://codepen.io/lizhaozhi">CodePen</a></li>
+							<li><a href="https://github.com/mrlizhaozhi">GitHub</a></li>
+							<li><a href="https://www.kaggle.com/mrlizhaozhi">Kaggle</a></li>
+							<li><a href="https://public.tableau.com/app/profile/lizhaozhi">Tableau</a></li>
+							<li><a href="https://www.linkedin.com/in/mrlizhaozhi">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Office of Li Zhaozhi
+					</div>
+					<div>
+						<ul id="footer-items">
+							<li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+							<li><a href="/privacy-policy/">Privacy Policy</a></li>
+							<li><a href="/accessibility/">Accessibility</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

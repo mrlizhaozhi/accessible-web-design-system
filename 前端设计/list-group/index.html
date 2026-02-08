@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>List group - front page links</title>
+		<style>
+			.list-group{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			}
+			
+			.list-group-list{
+				-webkit-box-flex: 25%;
+					-ms-flex: 25%;
+						flex: 25%;
+			}
+			
+			.list-group-list ul{
+				list-style-type: none;
+			}
+			
+			.list-group-list p{
+				font-size: 24px;
+				font-family: 'EB Garamond', serif;
+				color: white;
+			}
+			
+			@media (max-width: 900px){
+				.list-group-list{
+					-webkit-box-flex: 100%;
+						-ms-flex: 100%;
+							flex: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 style="padding-bottom: 20px; border-bottom: 1px solid #ccc; color: white; font-size: 3rem; font-weight: 50; line-height: 1;">
+				Leading <span style="color: yellow">strategic planning</span> and <span style="color: yellow">research initiatives</span> to advance <span style="color: yellow">professional</span>
+				and <span style="color: yellow">personal development</span>.
+			</h1>
+			
+			<div class="list-group">
+				<div class="list-group-list">
+					<p>Research</p>
+					<ul>
+						<li><a href="/research/overview">Overview</a></li>
+						<li><a href="/research/programmes/">Programmes</a></li>
+						<li><a href="/research/projects/">Projects</a></li>
+					</ul>
+				</div>
+				<div class="list-group-list">
+					<p>Art and design</p>
+					<ul>
+						<li><a href="/art-and-design/overview">Overview</a></li>
+						<li><a href="/art-and-design/our-business/">Our business</a></li>
+						<li><a href="/art-and-design/portfolio/">Portfolio</a></li>
+					</ul>
+				</div>
+				<div class="list-group-list">
+					<p>Press Office</p>
+					<ul>
+						<li><a href="/press-office/blogs-opeds/">Blogs and Op-eds</a></li>
+						<li><a href="/press-office/press-releases/">Press releases</a></li>
+						<li><a href="/press-office/social-media/">Social Media</a></li>
+					</ul>
+				</div>
+				<div class="list-group-list">
+					<p>Other content</p>
+					<ul>
+						<li><a href="/about-zhaozhi/about/">About me</a></li>
+						<li><a href="/about-zhaozhi/mission/">Mission</a></li>
+						<li><a href="/about-zhaozhi/values/">Values</a></li>
+					</ul>
+				</div>
+			</div>
+	</body>
+</html>
